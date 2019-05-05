@@ -1,0 +1,133 @@
+第1题float型float f=3.4是否正确?
+	答：不正确，因为3.4是一个double型数据，所以后面需要加一个f,既float f = 3.4f;
+
+
+第2题当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递?
+	答：这是一个引用传递。
+
+
+第3题在Java中一个类被声明为final类型，表示了什么意思?
+	答：表示该类不可被继承
+
+
+第4题Error与Exception有什么区别?
+	答：（1）、Error类一般是指与虚拟机相关的问题，如系统崩溃、内存不足等。对于这类错误的导致的应用程序中断，仅仅靠
+			程序本身无法恢复，建议终止程序
+		（2）、Exception类表示程序可以处理的异常，可以捕捉且可能恢复，遇到这类异常，应尽可能处理，不应随意终止异常。
+
+
+第5题谈谈final, finally的区别。
+	答：final为修饰符，修饰变量、类或者方法
+	finally在异常处理时提供finally块来执行任何清除操作
+
+
+第6题String s = new String(“xyz“);创建了几个String Object?
+	答：共创建了两个，一个是“xyz”常量，还有一个new对象
+
+
+第7题short s1 = 1; s1 = s1 + 1;有什么错? short s1 = 1; s1 += 1;有什么错?
+	答：由于s1+1运算时会自动提升表达式的类型，所以最终结果时int型，在赋值给short型s1时，编译器将报告需要强制类型转换
+		s1+=1虽然都是加1，但是在JVM里面是不同的方法做的，时运算符重载，所以这个是正确的
+
+
+第8题数组有没有length()这个方法? String有没有length()这个方法?
+	答：java数组中没有length()方法，求数组的长度可以使用数组的length属性
+		String有length()方法，用于求字符串的长度
+		
+		
+第9题Overload和Override的区别
+	答：Overload发生在一个类里面，方法名相同，功能相同，参数不同
+		Override发生在继承里面，子类继承父类，重写父类方法
+		
+
+第10题abstract class和interface有什么区别?
+	答：抽象类可以有构造方法，接口不能有构造方法
+		抽象类中可以有普通成员变量，接口中没有
+		抽象类中可以包含非抽象方法，接口中方法必须是抽象的
+		抽象类中可以包含静态方法，接口中的方法都必须覆盖，所以不能有静态方法
+		一个类可以实现多个接口，但是只能继承一个抽象类
+		
+		
+第11题构造器Constructor是否可被override?
+	答：可以被覆盖
+	
+	
+第12题是否可以继承String类?、
+	答：String类用final关键字修饰，所以不能被继承
+	
+	
+第13题
+题目如下：
+父类：
+子类：
+请问输出结果？
+	答：FatherClass Create
+		FatherClass Create
+		ChildClass Create
+
+
+第14题多线程有几种实现方法,都是什么?同步有几种实现方法,都是什么?
+	答：多线程有两种实现方法；分别是继承Thread类和实现Runnable接口
+		同步实现的方法有两种：分别是synchronized；wait和notify
+
+
+第15题请说出你所知道的线程同步的方法
+	答：使用synchronized关键字
+		wait和notify
+
+
+第16题当一个线程进入一个对象的一个synchronized方法后，其它线程是否可进入此对象的其它方法?
+	答：不可以，一个类只有一个this对象
+
+
+第17题
+从下列选项中选择两个正确的答案放在 line 3 中
+A.
+B.
+C.
+D.
+E.
+	答：选择C和E
+
+
+第18题STRING与STRINGBUFFER的区别
+	答：他俩的关系就是一个变量和一个常量的关系。
+		STRINGBUFFER对象内容可以被修改；而String对象一旦产生后，就不能修改，重新赋值其实是两个对象
+
+
+第19题Java类实现序例化的方法是?
+	答：Serializable接口和Externalizable接口
+
+
+第20题
+Collection框架中实现比较要实现什么接口?
+	答：comparable或者comparator
+
+
+
+第21题介绍Java中的Collection 框架结构
+	答：Collection：list列表和set集合
+		list接口中常用类
+			vector：线程安全，但是速度慢，已经被ArrayList代替。底层数据结构是数组结构
+			ArrayList：线程不安全，查询速度快。底层数据结构是数组结构
+			LinkedList：线程不安全，存取速度快。底层数据结构是列表结构
+		set接口中常用类
+			hashset:线程不安全，存取速度快，使用hashcode方法和equals方法保证元素的唯一性
+			Treeset：线程不安全，可以对set集合中的元素进行排序
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
